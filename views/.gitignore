@@ -1,0 +1,8 @@
+.DS_Store
+git-info.txt
+
+node_modules
+npm-debug.log
+public/bower_components
+public/css/**/*.css
+public/css/*.css

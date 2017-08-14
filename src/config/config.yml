@@ -1,0 +1,44 @@
+---
+production: &default
+  serverPort: 3000
+  baseUrl: http://www.studiovictory.com
+  baseApi: /api/
+  views:
+    engine: .hbs
+    extension: .hbs
+    layout: main
+  html:
+    minify: true
+    css:
+      compress: true
+      stylusPrecompile: true
+  controllers:
+    default: home
+  languages:
+    default: en
+    list: [en, es, fr, pt, jp]
+  security:
+    secret: stud10v1ct0ry.com
+  session:
+    cookieDomain: .studiovictory.com
+    maxAge: 86400
+    cookiePrefix: 'svSession_'
+    path: '/'
+    httpOnly: true
+
+stage: &stage
+  <<: *default
+  baseUrl: http://stage.studiovictory.com
+
+latest: &latest
+  <<: *stage
+  baseUrl: http://latest.studiovictory.com
+
+development:
+  <<: *latest
+  baseUrl: http://local.studiovictory.com
+  html:
+    minify: false
+    css:
+      compress: false
+      stylusPrecompile: false

@@ -1,0 +1,10 @@
+.DS_store
+.vagrant
+Berksfile.lock
+git_info.txt
+logs/*.log
+node_modules
+npm-debug.log
+public/brower_components
+public/css/**/*.css
+public/css/*.css
